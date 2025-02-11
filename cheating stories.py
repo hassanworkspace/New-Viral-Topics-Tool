@@ -29,7 +29,7 @@ keywords = [
 if st.button("Fetch Data"):
     try:
         # Calculate date range
-        start_date = (datetime.utcnow() - timedelta(days=int(days))).isoformat("T") + "Z"
+       start_date = (datetime.utcnow() - timedelta(days=int(days))).strftime("%Y-%m-%dT%H:%M:%SZ")
         all_results = []
 
         # Iterate over the list of keywords
